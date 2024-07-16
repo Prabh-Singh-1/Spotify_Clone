@@ -66,12 +66,14 @@ const playMusic = async (track, pause = false) => {
     currentsong.src = `/${currFolder}/` + track;
 
     try {
+        currentsong.muted = true;
         await currentsong.play();
+        currentsong.muted = false;
         document.getElementById("play").src = "pause.svg";
         document.querySelector(".songinfo").innerHTML = track.replaceAll("%20", " ");
         document.querySelector(".songtime").innerHTML = "00:00 / 00:00";
     } catch (error) {
-        console.error("Playback failed:", error);
+        return
     }
 };
 
