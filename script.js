@@ -19,7 +19,7 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`/${folder}/`);
+    let a = await fetch("https://techi-talks.vercel.app/song/ncs/");
     let response = await a.text();
     console.log(response);
     let div = document.createElement("div");    
@@ -78,8 +78,8 @@ const playMusic = async (track, pause = false) => {
 };
 
 async function main() {
-    await getSongs("Spotify_Clone/song/ncs/");
-    console.log('Songs: ', getSongs);
+    await getSongs("song/ncs");
+
     // Wait for user interaction before playing the first song
     document.addEventListener("click", () => {
         if (songs.length > 0) {
