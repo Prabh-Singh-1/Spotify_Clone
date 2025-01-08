@@ -21,6 +21,7 @@ async function getSongs(folder) {
     currFolder = folder;
     const proxyUrl = "https://prabh-singh-1.github.io"; 
     let a = await fetch(`${proxyUrl}/song/ncs/`);
+    console.log('path ', a);
     let response = await a.text();
     console.log(response);
     let div = document.createElement("div");    
