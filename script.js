@@ -73,7 +73,7 @@ const playMusic = async (track, pause = false) => {
         document.querySelector(".songinfo").innerHTML = track.replaceAll("%20", " ");
         document.querySelector(".songtime").innerHTML = "00:00 / 00:00";
     } catch (error) {
-        return
+        console.error("Playback failed:", error);
     }
 };
 
