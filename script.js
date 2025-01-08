@@ -78,8 +78,8 @@ const playMusic = async (track, pause = false) => {
 };
 
 async function main() {
-    await getSongs("https://spotify-clone-zeta-beige.vercel.app/song/ncs");
-
+    await getSongs("https://prabh-singh-1.github.io/Spotify_Clone/song/ncs");
+    console.log('Songs: ', getSongs);
     // Wait for user interaction before playing the first song
     document.addEventListener("click", () => {
         if (songs.length > 0) {
