@@ -19,7 +19,7 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`https://spotify-clone-zeta-beige.vercel.app/${currFolder}`);
+    let a = await fetch(`/${folder}/`);
     let response = await a.text();
     console.log(response);
     let div = document.createElement("div");    
@@ -78,7 +78,7 @@ const playMusic = async (track, pause = false) => {
 };
 
 async function main() {
-    await getSongs("song/ncs");
+    await getSongs("https://spotify-clone-zeta-beige.vercel.app/song/ncs");
 
     // Wait for user interaction before playing the first song
     document.addEventListener("click", () => {
