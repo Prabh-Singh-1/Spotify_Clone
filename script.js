@@ -19,7 +19,8 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch("https://prabh-singh-1.github.io/song/ncs/");
+    const proxyUrl = "https://prabh-singh-1.github.io"; 
+    let a = await fetch(`${proxyUrl}/song/ncs/`);
     let response = await a.text();
     console.log(response);
     let div = document.createElement("div");    
