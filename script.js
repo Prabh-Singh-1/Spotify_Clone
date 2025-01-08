@@ -19,7 +19,7 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch("http://127.0.0.1:3000/song/ncs/");
+    let a = await fetch("https://spotify-clone-git-main-prabhleen-singhs-projects.vercel.app/song/ncs/");
     let response = await a.text();
     console.log(response);
     let div = document.createElement("div");    
